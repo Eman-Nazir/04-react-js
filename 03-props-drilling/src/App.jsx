@@ -129,9 +129,10 @@ console.log(jobCards);
   return (
     <div className='w-[100%]  bg-[#111] p-[30px] flex flex-wrap gap-8'>
   {
-    jobCards.map((card)=>{
-      return  <Card image={card.image} company={card.company} posted={card.posted} role={card.role} jobType={card.jobType} level={card.level}  pay={card.pay} location={card.location}/>
-
+    jobCards.map((card,index)=>{
+      return <div key={index}> 
+        <Card image={card.image} company={card.company} posted={card.posted} role={card.role} jobType={card.jobType} level={card.level}  pay={card.pay} location={card.location}/>
+          </div>
     })
   }
    
