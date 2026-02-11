@@ -1,0 +1,25 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "Salman Khan",
+      "username": "salman",
+      "email": "salman@gmail.com",
+      "age": 22
+    },
+    {
+      "id": 2,
+      "name": "Ali Raza",
+      "username": "ali",
+      "email": "ali@gmail.com",
+      "age": 24
+    },
+    {
+      "id": 3,
+      "name": "Ahmed Hassan",
+      "username": "ahmed",
+      "email": "ahmed@gmail.com",
+      "age": 21
+    }
+  ]
+}
