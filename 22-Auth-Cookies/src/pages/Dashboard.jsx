@@ -10,7 +10,8 @@ export default function Dashboard() {
   const handleLogout = () => {
     logout();
     toast.success("Logged out successfully!");
-    navigate("/"); // redirect to login
+    navigate("/"); 
+    // redirect to login
   };
 
   return (

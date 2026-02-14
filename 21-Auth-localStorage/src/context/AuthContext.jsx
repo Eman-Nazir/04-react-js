@@ -9,7 +9,7 @@ export const AuthProvider = ({ children }) => {
     return stored ? JSON.parse(stored) : [];
   });
 
-  // Load currentUser from localStorage (for persistence)
+  // Load currentUser from localStorage
   const [currentUser, setCurrentUser] = useState(() => {
     const storedUser = localStorage.getItem("currentUser");
     return storedUser ? JSON.parse(storedUser) : null;
@@ -20,7 +20,7 @@ export const AuthProvider = ({ children }) => {
     const user = users.find(u => u.email === email && u.password === password);
     if (user) {
       setCurrentUser(user);
-      localStorage.setItem("currentUser", JSON.stringify(user)); // store in localStorage
+      localStorage.setItem("currentUser", JSON.stringify(user)); 
       return true;
     }
     return false;
@@ -40,7 +40,7 @@ export const AuthProvider = ({ children }) => {
   // Logout function
   const logout = () => {
     setCurrentUser(null);
-    localStorage.removeItem("currentUser"); // remove from localStorage
+    localStorage.removeItem("currentUser")
   };
 
   return (

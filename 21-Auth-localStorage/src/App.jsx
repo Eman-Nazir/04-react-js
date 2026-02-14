@@ -5,13 +5,13 @@ import Signup from "./pages/Signup";
 import Dashboard from "./pages/Dashboard";
 import ProtectedRoute from "./components/ProtectedRoute";
 
-import { Toaster } from "react-hot-toast"; // <- import
+import { Toaster } from "react-hot-toast"; 
 
 function App() {
   return (
     <AuthProvider>
       <BrowserRouter>
-        <Toaster position="top-right" reverseOrder={false} /> {/* <- Toaster */}
+        <Toaster position="top-right" reverseOrder={false} /> 
         <Routes>
           <Route path="/" element={<Login />} />
           <Route path="/signup" element={<Signup />} />

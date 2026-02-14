@@ -1,7 +1,7 @@
 import { useState, useContext } from "react";
 import { AuthContext } from "../context/AuthContext";
 import { useNavigate, Link } from "react-router-dom";
-import toast from "react-hot-toast"; // <- import
+import toast from "react-hot-toast"; 
 
 export default function Login() {
   const [form, setForm] = useState({ email: "", password: "" });
@@ -14,9 +14,10 @@ export default function Login() {
     const success = login(form.email, form.password);
     if (success) {
       toast.success("Login successful!");
-      navigate("/dashboard"); // go to protected route
+      navigate("/dashboard"); 
+      // go to protected route
     } else {
-      toast.error("Invalid email or password!"); // <- toast
+      toast.error("Invalid email or password!"); 
     }
   };
 

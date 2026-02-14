@@ -18,10 +18,7 @@ export default function Dashboard() {
           <p><strong>Email:</strong> {currentUser.email}</p>
         </div>
 
-        <div className="mt-4 p-3 bg-black text-green-400 rounded-lg text-sm break-all">
-          <strong>UUID Token:</strong>
-          <p>{currentUser.token}</p>
-        </div>
+        
 
       </div>
     </div>

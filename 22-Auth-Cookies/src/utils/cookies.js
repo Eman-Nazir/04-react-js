@@ -5,7 +5,7 @@ export const setCookie = (name, value, days) => {
   if (days) {
     Cookies.set(name, JSON.stringify(value), { expires: days });
   } else {
-    Cookies.set(name, JSON.stringify(value)); // session cookie
+    Cookies.set(name, JSON.stringify(value)); 
   }
 };
 

@@ -1,8 +1,7 @@
 import { useState, useContext } from "react";
 import { AuthContext } from "../context/AuthContext";
 import { useNavigate, Link } from "react-router-dom";
-import toast from "react-hot-toast"; // <- import
-
+import toast from "react-hot-toast"; 
 export default function Signup() {
   const [form, setForm] = useState({
     username: "",
@@ -19,10 +18,11 @@ export default function Signup() {
 
     const success = signup(form);
     if (success) {
-      toast.success("Signup successful! Please login."); // <- toast
-      navigate("/"); // redirect to login
+      toast.success("Signup successful! Please login.");
+      navigate("/"); 
+      // redirect to login
     } else {
-      toast.error("Email already exists. Try login."); // <- toast
+      toast.error("Email already exists. Try login.");
     }
   };
 

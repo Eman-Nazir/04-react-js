@@ -6,7 +6,7 @@ export default function ProtectedRoute({ children }) {
   const { currentUser } = useContext(AuthContext);
 
   if (!currentUser) {
-    return <Navigate to="/" />; // redirect only if no currentUser
+    return <Navigate to="/" />;
   }
 
   return children;

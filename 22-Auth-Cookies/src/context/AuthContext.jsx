@@ -4,7 +4,6 @@ import { setCookie, getCookie, removeCookie } from "../utils/cookies";
 export const AuthContext = createContext();
 
 export const AuthProvider = ({ children }) => {
-  // Users stored in localStorage only for signup/login reference
   const [users, setUsers] = useState(() => {
     const stored = localStorage.getItem("users");
     return stored ? JSON.parse(stored) : [];
@@ -19,7 +18,7 @@ const login = (email, password) => {
   const user = users.find(u => u.email === email && u.password === password);
   if (user) {
     setCurrentUser(user);
-    setCookie("currentUser", user); // no 'days' = session cookie
+    setCookie("currentUser", user); 
     return true;
   }
   return false;
@@ -33,7 +32,7 @@ const login = (email, password) => {
 
     const updatedUsers = [...users, userData];
     setUsers(updatedUsers);
-    localStorage.setItem("users", JSON.stringify(updatedUsers)); // persist users
+    localStorage.setItem("users", JSON.stringify(updatedUsers));
     return true;
   };
 
